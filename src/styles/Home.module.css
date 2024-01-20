@@ -5,6 +5,7 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  font-family: 'Montserrat';
 }
 
 .description {
@@ -249,6 +250,68 @@
     z-index: 1;
   }
 }
+
+/* airbnb logo */
+.airbnbLogo{
+  border: 1px solid red;
+  border-radius: 58px;
+  padding: 14px;
+}
+.profilePic:hover{
+  background-color: rgba(226, 151, 103, 1) !important;
+  opacity: 0.9;
+}
+
+/* sliderNav */
+.fa-bullhorn{
+  padding-left: 10px;
+  padding-right: 20px;
+}
+#list{
+  display: flex;
+  flex-direction: row;
+}
+  #carousel-container{
+  width: 100%;
+  background-color: #333;
+  background-color: #1c1c1c;
+  color: #fff !important;
+  font-weight: bold;
+  
+  }
+  #carousel-container ul{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  }
+#carousel-container ul li{
+  background: var(--light-blue);
+  color: var(--text-color);
+  padding: 10px 10px;
+  border-radius: 7px;
+  /* border: 1px outset var(--text-color); */
+  box-shadow:
+  2px 2px 2px var(--dark-blue-shadow),
+  2px 3px 3px var(--dark-blue-shadow),
+  2px 5px 5px var(--dark-blue-shadow),
+  2px 8px 8px var(--dark-blue-shadow);
+}
+  
+  #carousel-container[data-animated]{
+  overflow: hidden;
+  }
+  #carousel-container[data-animated] #list{
+  width: max-content;
+  animation: scroll 80s linear infinite;
+  }
+  
+  @keyframes scroll{
+  to{
+  translate: calc(-50% - 5px);
+  }
+  }
+
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
