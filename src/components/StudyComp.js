@@ -1,5 +1,6 @@
 import { motion, useScroll } from "framer-motion";
 
+import AnimatedText from "./AnimatedText";
 import Lilcon from "./Lilcon";
 import React from "react";
 import { useRef } from "react";
@@ -18,7 +19,7 @@ const Details = ({ type, time, place, info }) => {
         transition={{ duration: 0.5, type: "spring" }}
       >
         <h3 className="capitalize font-bold text-2xl">{type}</h3>
-        <span className="capitalize font-light text-dark/75 dark:text-light/75">
+        <span className="capitalize font-light text-dark/75">
           {time} | {place}
         </span>
         <p className="font-medium w-full">{info}</p>
@@ -27,30 +28,31 @@ const Details = ({ type, time, place, info }) => {
   );
 };
 
-export default function Education() {
+function StudyComp() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center start"],
   });
   return (
-    <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center">Education</h2>
+    <div className="my-24">
+      {/* <h2 className="font-bold text-8xl mb-32 w-full text-center">Education</h2> */}
+      {/* <AnimatedText text="Here's To Continuous Learning" /> */}
 
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light"
+          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
         />
         <ul className="w-full flex flex-col items-start justify-between m1-4">
           <Details
-            type="Diploma of Information Technology"
+            type="System design"
             time="2020-2022"
             place={"Coder Academy"}
             info="Relevant course included Computer Science, Data and Algorithim, Computer Systems"
           />
           <Details
-            type="High School Certificate"
+            type="Client-side storage"
             time="2010-2012"
             place={"Allsaints Catholic Senior College"}
             info="Relevant course included Computer Science, Data and Algorithim, Computer Systems"
@@ -60,3 +62,5 @@ export default function Education() {
     </div>
   );
 }
+
+export default StudyComp;

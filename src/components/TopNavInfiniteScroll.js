@@ -1,9 +1,8 @@
 import "../styles/Home.module.css";
 
-import { useEffect, useState } from "react";
-
 import React from "react";
 import styles from "./index.module.css";
+import { useEffect } from "react";
 
 export default function TopNavInfiniteScroll() {
   useEffect(() => {
@@ -21,9 +20,9 @@ export default function TopNavInfiniteScroll() {
     <div
       id="carousel-container"
       data-animated
-      className={styles.carouselContainer}
+      className={`dark:bg-light dark:color-dark ${styles.carouselContainer}`}
     >
-      <ul id="list" className={styles.list}>
+      <ul id="list" className={`dark:text-dark ${styles.list}`}>
         <li>
           <i className={`fa-solid fa-bullhorn`}></i> AVAILABLE FOR WORK!{" "}
         </li>

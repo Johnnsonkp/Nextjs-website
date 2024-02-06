@@ -8,57 +8,62 @@ import Head from "next/head";
 import Image from "next/image";
 import Layout from "@/components/Layout";
 import { Skills } from "@/components/Skills";
+import about1 from "/public/images/profile/about-me-1.jpeg";
+import about2 from "/public/images/profile/about-me-2.jpeg";
+import about3 from "/public/images/profile/about-me-3.jpeg";
+import about4 from "/public/images/profile/about-me-4.jpeg";
+import about6 from "/public/images/profile/about-me-6.jpeg";
 import profilePic from "../../public/images/profile/developer-pic-8.png";
 
 const StillCarousel = () => {
   return (
-    <div className="flex w-full flex-row items-center mt-10 justify-between">
-      <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-5 m-3">
+    <div className="flex w-full flex-row items-center mt-2 justify-between">
+      <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-2 m-3">
         <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] " />
         <Image
-          src={profilePic}
+          src={about1}
           alt="Chinonso"
-          className="w-full h-600 rounded-2xl border-2 border-solid border-dark bg-dark"
+          className="w-full h-600 rounded-2xl border-2"
         />
       </div>
-      <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-5 m-3">
+      <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-1 m-3">
         <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem" />
         <Image
-          src={profilePic}
+          src={about2}
           alt="Chinonso"
-          className="w-full h-600 rounded-2xl border-2 border-solid border-dark bg-dark"
+          className="w-full h-600 rounded-2xl border-2 "
         />
       </div>
-      <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-5 m-3">
+      <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-1 m-3">
+        <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] " />
+        <Image
+          src={about3}
+          alt="Chinonso"
+          className="w-full h-600 rounded-2xl border-2 "
+        />
+      </div>
+      <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-1 m-3">
+        <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] " />
+        <Image
+          src={about4}
+          alt="Chinonso"
+          className="w-full h-600 rounded-2xl border-2 "
+        />
+      </div>
+      <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-1 m-3">
+        <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] " />
+        <Image
+          src={about6}
+          alt="Chinonso"
+          className="w-full h-600 rounded-2xl border-2 "
+        />
+      </div>
+      <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-1 m-3">
         <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] " />
         <Image
           src={profilePic}
           alt="Chinonso"
-          className="w-full h-600 rounded-2xl border-2 border-solid border-dark bg-dark"
-        />
-      </div>
-      <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-5 m-3">
-        <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] " />
-        <Image
-          src={profilePic}
-          alt="Chinonso"
-          className="w-full h-600 rounded-2xl border-2 border-solid border-dark bg-dark"
-        />
-      </div>
-      <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-5 m-3">
-        <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] " />
-        <Image
-          src={profilePic}
-          alt="Chinonso"
-          className="w-full h-600 rounded-2xl border-2 border-solid border-dark bg-dark"
-        />
-      </div>
-      <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-5 m-3">
-        <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] " />
-        <Image
-          src={profilePic}
-          alt="Chinonso"
-          className="w-full h-600 rounded-2xl border-2 border-solid border-dark bg-dark"
+          className="w-full h-600 rounded-2xl border-2 bg-dark"
         />
       </div>
     </div>
@@ -95,12 +100,12 @@ function about() {
         <title>Chinonso.io | About Page</title>
         <meta name="description" content="About me"></meta>
       </Head>
-      <main className="flex w-full flex-col items-center justify-center">
+      <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText text="Purposefully Driven!" className="mb-16" />
           <div className="grid w-full grid-cols-8 grid-rows-1 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light">
                 About Me
               </h2>
               <p className="font-medium">
@@ -124,12 +129,16 @@ function about() {
               </p>
             </div>
 
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8">
-              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark " />
+            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light">
+              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light " />
               <Image
                 src={profilePic}
                 alt="Chinonso"
-                className="w-full h-600 rounded-2xl border-2 border-solid border-dark bg-dark"
+                className="w-full h-600 rounded-2xl border-2 border-solid border-dark bg-dark "
+                priority
+                sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw"
               />
             </div>
 

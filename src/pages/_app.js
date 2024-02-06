@@ -5,6 +5,7 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import NavBar from "@/components/NavBar";
+import NavBarCustom from "@/components/NavBarCustom";
 import TopNavInfiniteScroll from "@/components/TopNavInfiniteScroll";
 
 const montserrat = Montserrat({
@@ -19,13 +20,13 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        
       </Head>
       <main
-        className={`${montserrat.variable} font-mont bg-light w-full min-h-screen`}
+        className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
       >
         <TopNavInfiniteScroll />
-        <NavBar />
+        {/* <NavBar /> */}
+        <NavBarCustom />
         <Component {...pageProps} />
         <Footer />
       </main>
