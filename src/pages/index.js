@@ -16,7 +16,7 @@ export default function Home() {
         <title>Chinonso.io</title>
         <meta
           name="description"
-          content="I am Chinonso John Nkpolukwu, a Full-stack developer, Shopify Developer and Short-term rental Host. Welcome to my portfolio."
+          content="I am Chinonso John Nkpolukwu, a Full-stack developer, Shopify Developer and Short-term rental Host. Welcome to my portfolio website."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -51,7 +51,7 @@ export default function Home() {
                       cursor: "pointer",
                     }}
                     src={profilePic}
-                    alt="Software Developer profile picture"
+                    alt="Professional Image for Developer Bio"
                     className={`w-full h-auto ${styles.profilePic} lg:hidden md:!inline-block md:!h-[400px] md:!w-full md:mb-8`}
                   />
                 </Link>
@@ -68,9 +68,22 @@ export default function Home() {
                 <div className="relative left-[20%] lg:static ">
                   <p className="mt-8 mb-5 text-base font-medium w-[540px] md:w-[100%]">
                     As a dynamic Full-Stack Developer with expertise in React,
-                    and Ruby on Rails, including Shopify development I bring a
-                    distinctive touch as a Short-Term Rental Host. My approach
-                    involves leveraging technology to achieve optimal results.
+                    <Link href="https://rubyonrails.org/" target={"_blank"}>
+                      Ruby on Rails
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="https://shopify.dev/" target={"_blank"}>
+                      Shopify
+                    </Link>{" "}
+                    Web Development. I bring a distinctive touch as a{" "}
+                    <Link
+                      href="https://www.airbnb.com.au/users/show/447493012"
+                      target={"_blank"}
+                    >
+                      Short-Term Rental Host
+                    </Link>
+                    . My approach involves leveraging technology into achieving
+                    the best results.
                   </p>
 
                   <div className="flex items-center self-end mt-2 lg:text-center  lg:!self-center lg:justify-center">
@@ -83,7 +96,7 @@ export default function Home() {
                       Resume <LinkArrow className={"w-6 ml-1"} />
                     </Link>
                     <Link
-                      href="/dummy.pdf"
+                      href="mailto:john.nkp1@gmail.com"
                       target={"_blank"}
                       className="ml-4 text-lg font-medium captilize text-dark underline dark:text-light"
                     >
@@ -96,7 +109,7 @@ export default function Home() {
           </div>
         </Layout>
 
-        {/* <TrustSection /> */}
+        <TrustSection />
         <HireMe />
       </main>
     </>

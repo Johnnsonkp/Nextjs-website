@@ -34,6 +34,9 @@ const dynamicRoute = (sentence) => {
     case "Vacation Rental Host":
       return "https://www.airbnb.com.au/users/show/447493012";
       break;
+    case "Shopify Developer":
+      return "/projects";
+      break;
     default:
       return "/projects";
   }
@@ -75,6 +78,9 @@ export const AnimatedText = ({ textArr, text, style, className = "" }) => {
                 <Link
                   key={sentence + "-" + index}
                   href={`${dynamicRoute(sentence)}`}
+                  target={`${
+                    sentence === "Vacation Rental Host" ? "_blank" : ""
+                  }`}
                 >
                   {sentence.split(" ").map((word, index) => (
                     <motion.span
