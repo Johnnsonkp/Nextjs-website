@@ -43,7 +43,7 @@ export const AnimatedText = ({ textArr, text, style, className = "" }) => {
   return (
     <div className="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden sm:py-0">
       <motion.h1
-        className={`inline-block w-full text-dark !font-bold capitalise text-8xl dark:text-light ${className}`}
+        className={`inline-block w-full text-dark !font-bold capitalise text-8xl dark:text-light ${className} sm:!text-50px`}
         variants={quote}
         initial="initial"
         animate="animate"
@@ -69,7 +69,7 @@ export const AnimatedText = ({ textArr, text, style, className = "" }) => {
               <div
                 key={sentence + "-" + index}
                 className={
-                  "cursor-pointer hover:bg-green-300 hover:text-light inline-block sm:!text-3xl sm:!text-left"
+                  "cursor-pointer hover:bg-green-300 hover:text-light inline-block sm:!text-[2.1rem] sm:!text-left"
                 }
               >
                 <Link
@@ -88,7 +88,7 @@ export const AnimatedText = ({ textArr, text, style, className = "" }) => {
                     </motion.span>
                   ))}
                 </Link>
-                ;
+                <span className="sm:hidden">;</span>
               </div>
             );
           })}

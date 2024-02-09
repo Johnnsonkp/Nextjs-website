@@ -93,7 +93,7 @@ const NavBarCustom = () => {
 
   return (
     <header
-      className={`w-full px-20 py-2 font-medium flex items-center justify-between dark:text-light mt-0 mb-0 border-b-[1px] border-lightGray overflow-hidden relative`}
+      className={`w-full px-20 py-2 font-medium flex items-center justify-between dark:text-light mt-0 mb-0 border-b-[1px] border-lightGray overflow-hidden relative sm:!px-5 sm:!py-4 `}
     >
       <button
         className="flex-col justify-center items-center hidden lg:flex"
@@ -131,7 +131,7 @@ const NavBarCustom = () => {
             title={"Articles"}
             className={"py-6 px-5"}
           />
-          <CustomLink href={"/study"} title={"Study"} className={"py-6 px-5"} />
+          {/* <CustomLink href={"/study"} title={"Study"} className={"py-6 px-5"} /> */}
         </nav>
 
         <nav className="flex items-center justify-center flex-wrap ">
@@ -144,15 +144,6 @@ const NavBarCustom = () => {
           >
             <TwitterIcon />
           </motion.a>
-          {/* <motion.a
-            href="/"
-            target={"_blank"}
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3"
-          >
-            <DribbbleIcon />
-          </motion.a> */}
           <motion.a
             href="/"
             target={"_blank"}

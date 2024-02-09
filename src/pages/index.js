@@ -6,8 +6,6 @@ import Layout from "@/components/Layout";
 import Link from "next/link";
 import { LinkArrow } from "@/components/icons";
 import TrustSection from "@/components/TrustSection";
-// import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
-import lightBulb from "../../public/images/svgs/airbnb-icon.svg";
 import profilePic from "../../public/images/profile/developer-pic-5.png";
 import styles from "../styles/Home.module.css";
 
@@ -24,14 +22,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={` text-dark w-full min-h-screen main dark:text-light`}>
-        <Layout className="pt-6 mt-10 flex items-center md:!p-12 sm:pt-8 sm:!px-1 lg:mt-0">
+        <Layout className="pt-6 mt-10 flex items-center md:p-6 sm:!pt-10 sm:!px-5 lg:mt-0 sm:!m-0">
           <div className="flex items-center justify-around w-full border border-solid rounded-lg border-transparent">
             <div className="flex items-center justify-around w-full border border-solid rounded-lg border-transparent relative lg:flex-col md:!self-center">
               <div
                 className="w-1/2 md:!static md:w-full"
                 style={{
                   position: "relative",
-                  // left: "-300px",
                   right: "30%",
                 }}
               >
@@ -66,7 +63,7 @@ export default function Home() {
                     "Shopify Developer",
                     "Vacation Rental Host",
                   ]}
-                  className="!text-[68px] !text-right !font-bold xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl sm:!text-3xl sm:!w-full"
+                  className="!text-[68px] !text-right !font-bold xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl sm:!w-full "
                 />
                 <div className="relative left-[20%] lg:static ">
                   <p className="mt-8 mb-5 text-base font-medium w-[540px] md:w-[100%]">
