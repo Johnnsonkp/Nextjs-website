@@ -13,7 +13,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Chinonso.io</title>
+        <title>
+          Chinonso.io - React, Ruby on Rails and Shopify Software Developer
+        </title>
         <meta
           name="description"
           content="I am Chinonso John Nkpolukwu, a Full-stack developer, Shopify Developer and Short-term rental Host. Welcome to my portfolio website."
@@ -22,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={` text-dark w-full min-h-screen main dark:text-light`}>
-        <Layout className="pt-6 mt-10 flex items-center md:p-6 sm:!pt-10 sm:!px-5 lg:mt-0 sm:!m-0">
+        <Layout className="pt-6 mt-10 flex items-center md:p-6 sm:!pt-10 sm:!px-5 lg:mt-0 sm:!m-0 sm:!pb-0">
           <div className="flex items-center justify-around w-full border border-solid rounded-lg border-transparent">
             <div className="flex items-center justify-around w-full border border-solid rounded-lg border-transparent relative lg:flex-col md:!self-center">
               <div
@@ -67,8 +69,12 @@ export default function Home() {
                 />
                 <div className="relative left-[20%] lg:static ">
                   <p className="mt-8 mb-5 text-base font-medium w-[540px] md:w-[100%]">
-                    As a dynamic Full-Stack Developer with expertise in React,
+                    As a dynamic Full-Stack Developer with expertise in{" "}
+                    <Link href="https://react.dev/" target={"_blank"}>
+                      React,
+                    </Link>{" "}
                     <Link href="https://rubyonrails.org/" target={"_blank"}>
+                      {" "}
                       Ruby on Rails
                     </Link>{" "}
                     and{" "}

@@ -91,10 +91,32 @@ const NavBarCustom = () => {
     setIsOpen(!isOpen);
   };
 
+  const DayNightSwitch = () => {
+    return (
+      <button
+        onClick={() => setMode(mode === "light" ? "dark" : "light")}
+        className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+          mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+        }`}
+      >
+        {mode === "dark" ? (
+          <SunIcon className={"fill-dark"} />
+        ) : (
+          <MoonIcon className={"fill-dark"} />
+        )}
+      </button>
+    );
+  };
+
   return (
     <header
       className={`w-full px-20 py-2 font-medium flex items-center justify-between dark:text-light mt-0 mb-0 border-b-[1px] border-lightGray overflow-hidden relative sm:!px-5 sm:!py-4 `}
+      style={{
+        boxSizing: "border-box",
+      }}
     >
+      <Logo className={"mr-4 py-5 px-3"} />
+      {/* <LogoDropDown className={"mr-4 py-5 px-3"} /> */}
       <button
         className="flex-col justify-center items-center hidden lg:flex"
         onClick={handleClick}
@@ -115,8 +137,6 @@ const NavBarCustom = () => {
           }`}
         ></span>
       </button>
-      <Logo className={"mr-4 py-5 px-3"} />
-      {/* <LogoDropDown className={"mr-4 py-5 px-3"} /> */}
       <div className="w-full flex justify-between items-center lg:hidden ml-20">
         <nav className="py-0 mt-0">
           <CustomLink href={"/"} title={"Home"} className={`py-6 px-2`} />
@@ -145,7 +165,7 @@ const NavBarCustom = () => {
             <TwitterIcon />
           </motion.a>
           <motion.a
-            href="/"
+            href="https://github.com/Johnnsonkp"
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -154,7 +174,7 @@ const NavBarCustom = () => {
             <GithubIcon />
           </motion.a>
           <motion.a
-            href="/"
+            href="https://www.linkedin.com/in/john-nkpolukwu-521201138/"
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -162,28 +182,7 @@ const NavBarCustom = () => {
           >
             <LinkedInIcon />
           </motion.a>
-          {/* <motion.a
-            href="/"
-            target={"_blank"}
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-6 ml-3"
-          >
-            <PinterestIcon />
-          </motion.a> */}
-
-          <button
-            onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`ml-3 flex items-center justify-center rounded-full p-1 ${
-              mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-            }`}
-          >
-            {mode === "dark" ? (
-              <SunIcon className={"fill-dark"} />
-            ) : (
-              <MoonIcon className={"fill-dark"} />
-            )}
-          </button>
+          <DayNightSwitch />
         </nav>
       </div>
 
@@ -236,17 +235,8 @@ const NavBarCustom = () => {
             >
               <TwitterIcon />
             </motion.a>
-            {/* <motion.a
-              href="/"
-              target={"_blank"}
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3"
-            >
-              <DribbbleIcon />
-            </motion.a> */}
             <motion.a
-              href="/"
+              href="https://github.com/Johnnsonkp"
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -255,7 +245,7 @@ const NavBarCustom = () => {
               <GithubIcon />
             </motion.a>
             <motion.a
-              href="/"
+              href="https://www.linkedin.com/in/john-nkpolukwu-521201138/"
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -263,35 +253,10 @@ const NavBarCustom = () => {
             >
               <LinkedInIcon />
             </motion.a>
-            {/* <motion.a
-              href="/"
-              target={"_blank"}
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 ml-3"
-            >
-              <PinterestIcon />
-            </motion.a> */}
-
-            <button
-              onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`ml-3 flex items-center justify-center rounded-full p-1 ${
-                mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-              }`}
-            >
-              {mode === "dark" ? (
-                <SunIcon className={"fill-dark"} />
-              ) : (
-                <MoonIcon className={"fill-dark"} />
-              )}
-            </button>
+            <DayNightSwitch />
           </nav>
         </motion.div>
       ) : null}
-      {/* <div className="absolute left-[50%] top- translate-x-[-50%]"> */}
-      {/* <div className="absolute left-[5%] top- translate-x-[-50%]">
-        <Logo />
-      </div> */}
     </header>
   );
 };
