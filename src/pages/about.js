@@ -7,6 +7,7 @@ import Experience from "@/components/Experience";
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "@/components/Layout";
+import Link from "next/link";
 import { Skills } from "@/components/Skills";
 import about1 from "/public/images/profile/about-me-1.jpeg";
 import about2 from "/public/images/profile/about-me-2.jpeg";
@@ -14,6 +15,8 @@ import about3 from "/public/images/profile/about-me-3.jpeg";
 import about4 from "/public/images/profile/about-me-4.jpeg";
 import about6 from "/public/images/profile/about-me-6.jpeg";
 import profilePic from "../../public/images/profile/developer-pic-8.png";
+
+// import profilePic from "../../public/images/profile/profilePic1.png";
 
 const StillCarousel = () => {
   return (
@@ -31,7 +34,7 @@ const StillCarousel = () => {
         <Image
           src={about2}
           alt="Chinonso"
-          className="w-full h-600 rounded-2xl border-2 "
+          className="w-full h-600 rounded-2xl border-2"
         />
       </div>
       <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-1 m-3">
@@ -101,19 +104,26 @@ function about() {
         <meta name="description" content="About me"></meta>
       </Head>
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
-        <Layout className="pt-16">
+        <Layout className="pt-16 sm:!p-5">
           <AnimatedText text="Purposefully Driven!" className="mb-16" />
-          <div className="grid w-full grid-cols-8 grid-rows-1 gap-16">
-            <div className="col-span-3 flex flex-col items-start justify-start">
+          <div className="grid w-full grid-cols-8 grid-rows-1 gap-16 sm:flex-col sm:grid-cols-2">
+            <div className="col-span-3 flex flex-col items-start justify-start sm:!order-2">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light">
                 About Me
               </h2>
               <p className="font-medium">
-                Hi, I'm CodeBucks, a web developer and UI/UX designer with a
-                passion for creating beautiful, functional, and user-centered
-                digital experiences. With 4 years of experience in the field. I
-                am always looking for new and innovative ways to bring my
-                clients' visions to life.
+                Hi, I'm{" "}
+                <Link
+                  target="_blank"
+                  href="https://www.linkedin.com/in/john-nkpolukwu-521201138/"
+                >
+                  Chinonso John Nkpolukwu
+                </Link>
+                , (John for short). I am a Melbourne based web developer and
+                UI/UX designer with a passion for creating beautiful,
+                functional, and user-centered digital experiences. With 3 years
+                of experience in the field. I am always looking for new and
+                innovative ways to bring my clients' visions to life.
               </p>
               <p className="font-medium my-4">
                 I believe that design is about more than just making things look
@@ -129,31 +139,33 @@ function about() {
               </p>
             </div>
 
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light">
-              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light " />
-              <Image
-                src={profilePic}
-                alt="Chinonso"
-                className="w-full h-600 rounded-2xl border-2 border-solid border-dark bg-dark "
-                priority
-                sizes="(max-width: 768px) 100vw,
+            <div className="col-span-3 h-80 relative rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light sm:!order-1">
+              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
+              <div className="w-full h-[280px] overflow-hidden">
+                <Image
+                  src={profilePic}
+                  alt="Chinonso"
+                  className="w-full h-30 rounded-2xl border-2 border-solid border-dark  bg-[#202020]"
+                  priority
+                  sizes="(max-width: 768px) 100vw,
                   (max-width: 1200px) 50vw,
                   33vw"
-              />
+                />
+              </div>
             </div>
 
-            <div className="col-span-2 flex flex-col items-end justify-between">
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
-                  <AnimatedNumbers value={50} />+
+            <div className="col-span-2 flex flex-col items-end justify-between sm:flex-row sm:!order-3 sm:text-center sm:!m-auto sm:items-center">
+              <div className="flex flex-col items-end justify-center sm:!items-center">
+                <span className="inline-block text-7xl font-bold sm:text-6xl">
+                  <AnimatedNumbers value={30} />+
                 </span>
                 <h2 className="text-xl font-meduim capitalize text-dark/75">
                   satisfied clients
                 </h2>
               </div>
 
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
+              <div className="flex flex-col items-end justify-center sm:!items-center">
+                <span className="inline-block text-7xl font-bold sm:text-6xl">
                   <AnimatedNumbers value={30} />+
                 </span>
                 <h2 className="text-xl font-meduim capitalize text-dark/75">
@@ -161,8 +173,8 @@ function about() {
                 </h2>
               </div>
 
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
+              <div className="flex flex-col items-end justify-center sm:!items-center">
+                <span className="inline-block text-7xl font-bold sm:text-6xl">
                   <AnimatedNumbers value={3} />+
                 </span>
                 <h2 className="text-xl font-meduim capitalize text-dark/75">
