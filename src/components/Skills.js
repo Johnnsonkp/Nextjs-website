@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import { motion } from "framer-motion";
 
 const Skill = ({ name, x, y }) => {
   return (
     <motion.div
-      className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark cursor-pointer absolute dark:bg-circularLight dark:text-dark"
+      className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark cursor-pointer absolute dark:bg-circularLight dark:text-dark sm:text-[11px]"
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
       whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
-      // transition={{ duration: 1.5 }}
       viewport={{ once: true }}
     >
       <img src={"./images/green-dot-2.png"} alt={name} className="pr-2 w-5" />
@@ -18,9 +18,20 @@ const Skill = ({ name, x, y }) => {
 };
 
 export function Skills() {
+  const [width, setWidth] = useState();
+
+  useEffect(() => {
+    if (window && window.innerWidth < 700) {
+      setWidth(window.innerWidth);
+      console.log("width", width);
+    }
+  }, []);
+  // console.log("window.innerWidth:", window.innerWidth);
   return (
     <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center">Skills</h2>
+      <h2 className="font-bold text-8xl mt-64 w-full text-center sm:mt-20">
+        Skills
+      </h2>
       <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:text-light dark:bg-circularDark">
         <motion.div
           className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark cursor-pointer dark:bg-circularLight dark:text-dark "
@@ -32,20 +43,69 @@ export function Skills() {
         <Skill
           className="dark:bg-circularLight dark:text-dark"
           name="HTML"
-          x="-25vw"
-          y="2vw"
+          x={`${width < 700 ? "-28vh" : "-28vw"}`}
+          y={`${width < 700 ? "5vh" : "5vw"}`}
         />
-        <Skill name="CSS" x="-5vw" y="-10vw" />
-        <Skill name="Javascript" x="20vw" y="6vw" />
-        <Skill name="ReactJS" x="0vw" y="8vw" />
-        <Skill name="NodeJS" x="-5vw" y="17vw" />
-        <Skill name="NextJS" x="-20vw" y="-15vw" />
-        <Skill name="Postgresql" x="-32vw" y="-8vw" />
-        <Skill name="Shopify (Liquid)" x="15vw" y="-12vw" />
-        <Skill name="Web Design" x="32vw" y="-5vw" />
-        <Skill name="Ruby" x="0vw" y="-20vw" />
-        <Skill name="Ruby On Rails" x="-25vw" y="18vw" />
-        <Skill name="Tailwind CSS" x="18vw" y="18vw" />
+        <Skill
+          name="CSS"
+          x={`${width < 700 ? "-14vh" : "-14vw"}`}
+          y={`${width < 700 ? "-10vh" : "-7vw"}`}
+        />
+        <Skill
+          name="Javascript"
+          x={`${width < 700 ? "20vh" : "20vw"}`}
+          y={`${width < 700 ? "16vh" : "6vw"}`}
+        />
+        <Skill
+          name="ReactJS"
+          x={`${width < 700 ? "0vh" : "0vw"}`}
+          y={`${width < 700 ? "18vh" : "8vw"}`}
+        />
+        <Skill
+          name="NodeJS"
+          x={`${width < 700 ? "-5vh" : "-5vw"}`}
+          y={`${width < 700 ? "27vh" : "17vw"}`}
+        />
+        <Skill
+          name="NextJS"
+          x={`${width < 700 ? "-20vh" : "-20vw"}`}
+          y={`${width < 700 ? "-25vh" : "-15vw"}`}
+        />
+        <Skill
+          name="Postgresql"
+          x={`${width < 700 ? "-25vh" : "-32vw"}`}
+          y={`${width < 700 ? "-15vh" : "-8vw"}`}
+        />
+        <Skill
+          name="Shopify (Liquid)"
+          x={`${width < 700 ? "12vh" : "12vw"}`}
+          y={`${width < 700 ? "-14vh" : "-12vw"}`}
+        />
+        <Skill
+          name="Web Design"
+          x={`${width < 700 ? "25vh" : "32vw"}`}
+          y={`${width < 700 ? "-5vh" : "-0vw"}`}
+        />
+        <Skill
+          name="Wordpress"
+          x={`${width < 700 ? "25vh" : "32vw"}`}
+          y={`${width < 700 ? "-20vh" : "-10vw"}`}
+        />
+        <Skill
+          name="Ruby"
+          x={`${width < 700 ? "0vh" : "0vw"}`}
+          y={`${width < 700 ? "-30vh" : "-20vw"}`}
+        />
+        <Skill
+          name="Ruby On Rails"
+          x={`${width < 700 ? "-25vh" : "-25vw"}`}
+          y={`${width < 700 ? "28vh" : "18vw"}`}
+        />
+        <Skill
+          name="Tailwind CSS"
+          x={`${width < 700 ? "18vh" : "18vw"}`}
+          y={`${width < 700 ? "28vh" : "18vw"}`}
+        />
       </div>
     </>
   );

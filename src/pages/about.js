@@ -16,11 +16,9 @@ import about4 from "/public/images/profile/about-me-4.jpeg";
 import about6 from "/public/images/profile/about-me-6.jpeg";
 import profilePic from "../../public/images/profile/developer-pic-8.png";
 
-// import profilePic from "../../public/images/profile/profilePic1.png";
-
 const StillCarousel = () => {
   return (
-    <div className="flex w-full flex-row items-center mt-2 justify-between">
+    <div className="flex w-full flex-row items-center mt-2 justify-between sm:!hidden">
       <div className="col-span-3 relative h-max rounded-2xl border border-solid border-dark bg-light p-2 m-3">
         <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] " />
         <Image
@@ -103,7 +101,7 @@ function about() {
         <title>Chinonso.io | About Page</title>
         <meta name="description" content="About me"></meta>
       </Head>
-      <main className="flex w-full flex-col items-center justify-center dark:text-light">
+      <main className="flex w-full flex-col items-center justify-center dark:text-light sm:overflow-hidden">
         <Layout className="pt-16 sm:!p-5">
           <AnimatedText text="Purposefully Driven!" className="mb-16" />
           <div className="grid w-full grid-cols-8 grid-rows-1 gap-16 sm:flex-col sm:grid-cols-2">
@@ -117,25 +115,47 @@ function about() {
                   target="_blank"
                   href="https://www.linkedin.com/in/john-nkpolukwu-521201138/"
                 >
-                  Chinonso John Nkpolukwu
+                  Chinonso John Nkpolukwu{" "}
                 </Link>
-                , (John for short). I am a Melbourne based web developer and
-                UI/UX designer with a passion for creating beautiful,
-                functional, and user-centered digital experiences. With 3 years
-                of experience in the field. I am always looking for new and
-                innovative ways to bring my clients' visions to life.
+                (or John for short). I'm a Melbourne based{" "}
+                <Link
+                  target="_blank"
+                  href="https://business.linkedin.com/talent-solutions/resources/how-to-hire-guides/software-developer/job-description"
+                >
+                  Software Developer,{" "}
+                </Link>
+                passionate about using code to create user-friendly front-end
+                designs for complex problems.
               </p>
               <p className="font-medium my-4">
-                I believe that design is about more than just making things look
-                pretty – it's about solving problems and creating intuitive,
-                enjoyable experiences for users.
+                Since 2020, after printing my first "hello world", I've immersed
+                myself in the software development space. Transitioning from the
+                Digital Marketing agency world using tools like HTML, CSS,
+                Javascript, Wordpress, Shopify, Adobe, Figma to the more
+                technical frontend development with tech stacks like React,
+                Typescript, Ruby on Rails, etc. The tools may have changed but
+                the goal has always remained the same.{" "}
+                <Link
+                  target="_blank"
+                  href="https://www.workshopper.com/post/what-is-ux-and-why-is-it-important#:~:text=UX%20Design%20in%20turn%2C%20is,%2C%20efficient%2C%20and%20relevant%20experience."
+                  className="italic border-b-2 border-orange-400"
+                >
+                  Solving problems and creating intuitive, enjoyable experiences
+                  for users.
+                </Link>
               </p>
               <p className="font-medium">
-                Whether I'm working on a website, mobile app, or other digital
-                product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                When I'm not immersed in web dev world, you'll find me playing
+                soccer, exploring Melbourne day/nightlife, oh and running my
+                small Vacation Rental business{" "}
+                <Link
+                  target="_blank"
+                  href="https://citystaysmelbourne.com.au"
+                  className="italic border-b-2 border-orange-400"
+                >
+                  CityStays Melbourne
+                </Link>
+                .
               </p>
             </div>
 
@@ -154,9 +174,9 @@ function about() {
               </div>
             </div>
 
-            <div className="col-span-2 flex flex-col items-end justify-between sm:flex-row sm:!order-3 sm:text-center sm:!m-auto sm:items-center">
-              <div className="flex flex-col items-end justify-center sm:!items-center">
-                <span className="inline-block text-7xl font-bold sm:text-6xl">
+            <div className="col-span-2 flex flex-col items-end justify-between sm:flex-row sm:!order-3 sm:text-center sm:!m-auto sm:items-center ">
+              <div className="flex flex-col items-end justify-center sm:!items-center sm:!px-2">
+                <span className="inline-block text-7xl font-bold sm:text-5xl">
                   <AnimatedNumbers value={30} />+
                 </span>
                 <h2 className="text-xl font-meduim capitalize text-dark/75">
@@ -164,8 +184,8 @@ function about() {
                 </h2>
               </div>
 
-              <div className="flex flex-col items-end justify-center sm:!items-center">
-                <span className="inline-block text-7xl font-bold sm:text-6xl">
+              <div className="flex flex-col items-end justify-center sm:!items-center sm:!px-2">
+                <span className="inline-block text-7xl font-bold sm:text-5xl">
                   <AnimatedNumbers value={30} />+
                 </span>
                 <h2 className="text-xl font-meduim capitalize text-dark/75">
@@ -173,8 +193,8 @@ function about() {
                 </h2>
               </div>
 
-              <div className="flex flex-col items-end justify-center sm:!items-center">
-                <span className="inline-block text-7xl font-bold sm:text-6xl">
+              <div className="flex flex-col items-end justify-center sm:!items-center sm:!px-2">
+                <span className="inline-block text-7xl font-bold sm:text-5xl">
                   <AnimatedNumbers value={3} />+
                 </span>
                 <h2 className="text-xl font-meduim capitalize text-dark/75">
