@@ -94,7 +94,7 @@ export default function Home() {
 
                   <div className="flex items-center self-end mt-2 lg:text-center  lg:!self-center lg:justify-center">
                     <Link
-                      href="/software-dev-portfolio-2024.pdf"
+                      href="/software-dev-portfolio-2024-2.pdf"
                       target={"_blank"}
                       className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
                       download={true}
