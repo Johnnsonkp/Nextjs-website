@@ -129,7 +129,7 @@ export const Project = ({ title, type, img, link, github, summary }) => {
     </article>
   );
 };
-function projects() {
+function Projects() {
   const [selectedTab, setSelectedTab] = useState("/projects");
   return (
     <>
@@ -161,4 +161,4 @@ function projects() {
   );
 }
 
-export default projects;
+export default Projects;
