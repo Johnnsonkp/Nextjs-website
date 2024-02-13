@@ -1,6 +1,7 @@
 import { motion, useScroll } from "framer-motion";
 
 import Lilcon from "./Lilcon";
+import Link from "next/link";
 import React from "react";
 import { useRef } from "react";
 
@@ -30,7 +31,8 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         <span className="capitalize font-medium text-dark/75 dark:text-light/75">
           {time} | {address}
         </span>
-        <p className="mt-3 font-medium w-full">{work}</p>
+        {/* <p className="mt-3 font-medium w-full">{work}</p> */}
+        <ul className="mt-3 font-medium w-full">{work}</ul>
       </motion.div>
     </li>
   );
@@ -59,9 +61,20 @@ export default function Experience() {
             company="City Stays Melbourne"
             companyLink={"https://citystaysmelbourne.com.au/"}
             time="2022-present"
+            tags={["wordpress", "CSS", "Javascript"]}
             address="220 Spencer Street, Melbourne, vic, 3000"
-            work="Worked on a team responsible for developing new features for Google's 
-                search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+            work={
+              <div className="w-[120%]">
+                As the founder of CityStays Melbourne, a small vacation rental
+                business specialising in short to mid-stay accommodations in
+                Melbourne CBD, I applied my technical experience to develop and
+                customise a direct booking website using WordPress. This
+                platform seamlessly integrates with a Property Management System
+                (PMS) thats synchronized to my Airbnb calendar. Through my
+                streamlined workflow, I have established a hands-off approach,
+                having people in place to manage daily operations.
+              </div>
+            }
           />
           <Details
             position="Front-End Developer"
@@ -69,8 +82,30 @@ export default function Experience() {
             companyLink={"https://www.myer.com.au/"}
             time="2022-2022"
             address="Richmond, Melbourne, Vic, 3121"
-            work="Worked on a team responsible for developing new features for Google's 
-                search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+            work={
+              <ul className="list-disc ml-5 w-[120%]">
+                <li>
+                  Collaborated with cross-functional teams to deliver
+                  high-quality software solutions within specified timelines.
+                </li>
+                <li>
+                  Collaborated with UX/UI designers to translate design concepts
+                  into functional and visually appealing frontend components.
+                </li>
+                <li>
+                  Developed and implemented responsive user interfaces using
+                  React and Typescript.
+                </li>
+                <li>
+                  Staying upto date with the latest trends, and incorporating
+                  new frontend tech.
+                </li>
+                <li>
+                  Participated in Agile development processes, contributing to
+                  sprint planning, stand-ups, and retrospectives.
+                </li>
+              </ul>
+            }
           />
 
           <Details
@@ -79,8 +114,34 @@ export default function Experience() {
             companyLink={"https://megaphone.com.au/"}
             time="2021-2022"
             address="33-41 Balmain Street Cremorne VIC 3121"
-            work="Worked on a team responsible for developing new features for Google's 
-                search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+            work={
+              <ul className="list-disc ml-5 w-[120%]">
+                <li>
+                  Developed and maintained visually appealing, user-friendly
+                  websites on e-commerce platforms, specializing in Shopify and
+                  WordPress.
+                </li>
+                <li>
+                  Implemented Conversion Rate Optimization (CRO) strategies to
+                  enhance user engagement and increase conversion rates across
+                  client websites.
+                </li>
+                <li>
+                  Utilized HTML, CSS, and JavaScript to create custom solutions
+                  that align with design specifications and client requirements.
+                </li>
+                <li>
+                  Wrote custom code in Liquid (Shopify), PHP (WordPress), and
+                  other relevant languages to customize and optimize website
+                  functionalities.
+                </li>
+                <li>
+                  Collaborated with developers, account managers, clients and
+                  stakeholders on a regular basis, explaining complex concepts
+                  in plain english.
+                </li>
+              </ul>
+            }
           />
 
           <Details
@@ -89,8 +150,29 @@ export default function Experience() {
             companyLink={"https://www.myemergencydr.com/"}
             time="2020-2021"
             address="10 Bond Street, Sydney, NSW, 2000"
-            work="Worked on a team responsible for developing new features for Google's 
-                search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+            work={
+              <ul className="list-disc ml-5 w-[120%]">
+                <li>
+                  Provided technical support to users, resolving hardware and
+                  software issues promptly to ensure seamless operations.
+                </li>
+                <li>
+                  Responded to inquiries and issues related to My Emergency
+                  Doctor's digital platforms, demonstrating a strong
+                  understanding of the technology and offering effective
+                  solutions..
+                </li>
+                <li>
+                  Generated detailed reports and summaries from Doctors,
+                  patients and emergency services for documentation purposes.
+                </li>
+                <li>
+                  Communicated with emergency serveces such as Ambulance
+                  Victoria and NSW Ambulance, organising triage services for
+                  patients and doctors.
+                </li>
+              </ul>
+            }
           />
         </ul>
       </div>

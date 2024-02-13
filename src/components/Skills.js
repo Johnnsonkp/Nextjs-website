@@ -26,13 +26,12 @@ export function Skills() {
       console.log("width", width);
     }
   }, []);
-  // console.log("window.innerWidth:", window.innerWidth);
   return (
     <>
       <h2 className="font-bold text-8xl mt-64 w-full text-center sm:mt-20">
         Skills
       </h2>
-      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:text-light dark:bg-circularDark">
+      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:text-light dark:bg-circularDark sm:!h-[80vh] sm:mt-10 sm:w-[105%]">
         <motion.div
           className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark cursor-pointer dark:bg-circularLight dark:text-dark "
           whileHover={{ scale: 1.05 }}

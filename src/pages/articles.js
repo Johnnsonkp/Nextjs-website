@@ -117,7 +117,11 @@ function articles() {
       </Head>
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
-          <AnimatedText text="Words Can Change The World!" className="mb-16" />
+          <AnimatedText
+            // text="Words Can Change The World!"
+            text="The Power of Words"
+            className="mb-16"
+          />
           <ul className="grid grid-cols-2 gap-16">
             <FeaturedArticle
               title="Student Spotlight Coder Academy Melbourne"
@@ -133,10 +137,10 @@ function articles() {
               summary="Learn How to build a custom pagination component in ReactJS from scratch."
               time="9 min read"
               img={article2}
-              link={"www.google.com"}
+              link={"/"}
             />
           </ul>
-          <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
+          {/* <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
             All Articles
           </h2>
           <ul>
@@ -180,7 +184,7 @@ function articles() {
               link="/"
               img={article4}
             />
-          </ul>
+          </ul> */}
         </Layout>
       </main>
     </>

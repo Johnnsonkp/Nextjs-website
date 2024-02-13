@@ -48,9 +48,8 @@ function TrustSection() {
           </h1>
           <p>
             Having had the privilege of collaborating with various clients
-            across multiple industries, this experience has enriched my skill
-            set, making me adept at using various technologies, tools and tech
-            stacks.
+            across multiple industries, has enriched my skill set, making me
+            adept at using various technologies, tools and tech stacks.
           </p>
         </div>
         <div

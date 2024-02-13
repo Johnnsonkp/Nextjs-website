@@ -9,7 +9,7 @@ const Details = ({ type, time, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between"
+      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between"
     >
       <Lilcon reference={ref} />
       <motion.div
@@ -44,7 +44,7 @@ export default function Education() {
           style={{ scaleY: scrollYProgress }}
           className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light"
         />
-        <ul className="w-full flex flex-col items-start justify-between m1-4">
+        <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
             type="Diploma of Information Technology"
             time="2020-2022"
@@ -55,7 +55,7 @@ export default function Education() {
             type="High School Certificate"
             time="2010-2012"
             place={"Allsaints Catholic Senior College"}
-            info="Relevant course included Computer Science, Data and Algorithim, Computer Systems"
+            // info="Relevant course included Computer Science, Data and Algorithim, Computer Systems"
           />
         </ul>
       </div>

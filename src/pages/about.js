@@ -125,7 +125,7 @@ function about() {
                   Software Developer,{" "}
                 </Link>
                 passionate about using code to create user-friendly front-end
-                designs for complex problems.
+                designs that solve complex problems.
               </p>
               <p className="font-medium my-4">
                 Since 2020, after printing my first "hello world", I've immersed
@@ -145,9 +145,9 @@ function about() {
                 </Link>
               </p>
               <p className="font-medium">
-                When I'm not immersed in web dev world, you'll find me playing
-                soccer, exploring Melbourne day/nightlife, oh and running my
-                small Vacation Rental business{" "}
+                When I'm not immersed in the web dev world, you'll find me
+                playing soccer, exploring Melbourne day/nightlife, oh and
+                running my small Vacation Rental business{" "}
                 <Link
                   target="_blank"
                   href="https://citystaysmelbourne.com.au"
