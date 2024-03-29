@@ -30,7 +30,7 @@ function TrustSection() {
     );
   };
   return (
-    <Layout className="pt-0 sm:!px-5">
+    <Layout className="pt-0 sm:!px-5 max-w-[2300px] m-auto">
       <div className="flex justify-between border-t-2 sm:inline-block sm:!pt-10 lg:flex-col lg:text-center ">
         <div
           className="lg:!mt-14"

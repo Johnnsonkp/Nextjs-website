@@ -145,7 +145,7 @@ function Projects() {
           <AnimatedText
             // text="Imagination Trumps knowledge!"
             // text="Unhinged Creativity"
-            text="Unleashed Imagination"
+            text="Personal / Professional Projects"
             className="mb-16"
           />
 

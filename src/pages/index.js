@@ -24,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={` text-dark w-full min-h-screen main dark:text-light`}>
-        <Layout className="pt-6 mt-10 flex items-center md:p-6 sm:!pt-10 sm:!px-5 lg:mt-0 sm:!m-0 sm:!pb-0">
+        <Layout className="pt-6 mt-10 flex items-center md:p-6 sm:!pt-10 sm:!px-5 lg:mt-0 sm:!m-0 sm:!pb-0 max-w-[2200px] m-auto">
           <div className="flex items-center justify-around w-full border border-solid rounded-lg border-transparent">
             <div className="flex items-center justify-around w-full border border-solid rounded-lg border-transparent relative lg:flex-col md:!self-center">
               <div
@@ -41,9 +41,10 @@ export default function Home() {
                   (max-width: 1200px) 50vw,
                   50vw"
                     style={{
-                      width: "450px",
+                      // width: "450px",
                       height: "500px",
-                      width: "90%",
+                      // width: "90%",
+                      maxWidth: "800px",
                       // width: "80%",
                       objectFit: "cover",
                       border: "2px solid rgba(238, 209, 136, 0.3)",
@@ -65,7 +66,7 @@ export default function Home() {
                     "Shopify Developer",
                     "Vacation Rental Host",
                   ]}
-                  className="!text-[68px] !text-right !font-bold xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl sm:!w-full "
+                  className="!text-[68px] !text-right !font-bold xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl sm:!w-full"
                 />
                 <div className="relative left-[20%] lg:static ">
                   <p className="mt-8 mb-5 text-base font-medium w-[540px] md:w-[100%]">

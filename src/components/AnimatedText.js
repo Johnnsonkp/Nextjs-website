@@ -44,7 +44,7 @@ const dynamicRoute = (sentence) => {
 
 export const AnimatedText = ({ textArr, text, style, className = "" }) => {
   return (
-    <div className="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden sm:py-0">
+    <div className="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden sm:py-0 max-w-[1400px]">
       <motion.h1
         className={`inline-block w-full text-dark !font-bold capitalise text-8xl dark:text-light ${className} sm:!text-50px`}
         variants={quote}
@@ -94,7 +94,7 @@ export const AnimatedText = ({ textArr, text, style, className = "" }) => {
                     </motion.span>
                   ))}
                 </Link>
-                <span className="sm:hidden">;</span>
+                {/* <span className="sm:hidden">;</span> */}
               </div>
             );
           })}
