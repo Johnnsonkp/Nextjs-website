@@ -17,20 +17,21 @@ function AgencyProjects() {
             img={ekohAgency}
             summary={
               <>
-                <p>CRO changes include:</p>
+                <p>CRO include:</p>
                 <ul className="list-disc ml-5">
-                  <li>
+                  {/* <li>
                     Looped throught products, to pick out and display best
                     seller products on home page
-                  </li>
-                  <li>
+                  </li> */}
+                  <li>Carefully curated best-selling products showcased on the homepage through product loop selection.</li>
+                  {/* <li>
                     Lazy loading images on page, specifically on instagram
                     carousel. siginificantly reducing website load times
-                  </li>
-                  <li>Design tweaks to Hero section, adding slick slider</li>
+                  </li> */}
+                  <li>Implemented lazy loading for images across the website, notably enhancing page load times, especially on the Instagram carousel.</li>
+                  <li>Revamped the Hero section with a sleek slider design for enhanced visual appeal.</li>
                   <li>
-                    Design tweaks to the footer, added social links + SEO
-                    content to footer
+                  Enhanced the footer by incorporating social links and SEO content, optimizing overall website visibility and engagement.
                   </li>
                 </ul>
               </>
@@ -46,14 +47,14 @@ function AgencyProjects() {
             img={theBookGrocer}
             summary={
               <>
-                <p>CRO changes include:</p>
+                <p>CRO include:</p>
                 <ul className="list-disc ml-5">
-                  <li>Designed the hero section of the home page.</li>
-                  <li>Created trust bar section on homepage.</li>
-                  <li>Created multiple collections on the homepage.</li>
+                  {/* <li>Designed the hero section of the home page.</li> */}
+                  <li>Designed a captivating hero section for enhanced homepage appeal.</li>
+                  <li>Implemented trust bar section on homepage to boost credibility and trustworthiness.</li>
+                  <li>Created custom collections on the homepage.</li>
                   <li>
-                    Added and styled testimonial slider to the bottom of the
-                    home page.
+                  Enhanced user engagement with a stylishly integrated testimonial slider at the bottom of the homepage.
                   </li>
                 </ul>
               </>
@@ -69,18 +70,18 @@ function AgencyProjects() {
             img={sissy}
             summary={
               <>
-                <p>CRO changes include:</p>
+                <p>CRO include:</p>
                 <ul className="list-disc ml-5">
                   <li>
-                    Full redesign of the homepage, including theme colour.
+                    Full redesign of the homepage, including theme design.
                   </li>
-                  <li>Created trust bar section on homepage.</li>
-                  <li>Created multiple collections on the homepage.</li>
+                  <li>Implemented trust bar section on homepage to boost credibility and trustworthiness.</li>
+                  <li>Created custom collections on the homepage.</li>
                   <li>
-                    Added and styled testimonial slider to the bottom of the
+                    Created and styled testimonial slider to the bottom of the
                     home page.
                   </li>
-                  <li>Added newsletter signup section above the footer</li>
+                  <li>Full redesign of the footer section including newsletter signup form.</li>
                 </ul>
               </>
             }
@@ -95,7 +96,7 @@ function AgencyProjects() {
             img={helenansell}
             summary={
               <>
-                <p>CRO changes include:</p>
+                <p>CRO include:</p>
                 <ul className="list-disc ml-5">
                   <li>Worked on the collections page</li>
                   <li>
@@ -115,7 +116,7 @@ function AgencyProjects() {
             img={bazilianleaves}
             summary={
               <>
-                <p>CRO changes include:</p>
+                <p>CRO include:</p>
                 <ul className="list-disc ml-5">
                   <li>
                     Added and styled the "in the press" trustbar section on
@@ -143,7 +144,7 @@ function AgencyProjects() {
             img={pressplay}
             summary={
               <>
-                <p>CRO changes include:</p>
+                <p>CRO include:</p>
                 <ul className="list-disc ml-5">
                   <li>Added top bar annpucement section to homepage.</li>
                   <li>Minor tweaks to product page</li>
