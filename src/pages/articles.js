@@ -132,13 +132,13 @@ function articles() {
                 "https://coderacademy.edu.au/blog/student-spotlight-chinonso-john-nkpolukwu-coder-academy-melbourne"
               }
             />
-            <FeaturedArticle
+            {/* <FeaturedArticle
               title="Build A Custom Pagination Component In Reactjs From Scratch."
               summary="Learn How to build a custom pagination component in ReactJS from scratch."
               time="9 min read"
               img={article2}
               link={"/"}
-            />
+            /> */}
           </ul>
           {/* <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
             All Articles
