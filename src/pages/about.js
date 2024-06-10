@@ -117,7 +117,7 @@ function about() {
                 >
                   Chinonso John Nkpolukwu{" "}
                 </Link>
-                (or John for short). I'm a Melbourne based{" "}
+                (John for short). I'm a Melbourne based{" "}
                 <Link
                   target="_blank"
                   href="https://business.linkedin.com/talent-solutions/resources/how-to-hire-guides/software-developer/job-description"
@@ -132,8 +132,8 @@ function about() {
                 myself in the software development space. Transitioning from the
                 Digital Marketing agency world using tools like HTML, CSS,
                 Javascript, Wordpress, Shopify, Adobe, Figma to the more
-                technical frontend development with tech stacks like React,
-                Typescript, Ruby on Rails, etc. The tools may have changed but
+                technical frontend development with tech stacks like React (Typescript), Node
+                , Ruby on Rails, etc. The tools may have changed but
                 the goal has always remained the same.{" "}
                 <Link
                   target="_blank"
@@ -145,17 +145,8 @@ function about() {
                 </Link>
               </p>
               <p className="font-medium">
-                When I'm not immersed in the web dev world, you'll find me
-                playing soccer, exploring Melbourne day/nightlife, oh and
-                running my small Vacation Rental business{" "}
-                <Link
-                  target="_blank"
-                  href="https://citystaysmelbourne.com.au"
-                  className="italic border-b-2 border-orange-400"
-                >
-                  CityStays Melbourne
-                </Link>
-                .
+                When I'm not immersed in the web dev world, you'll find me in the outdoors,
+                playing soccer and exploring Melbourne.
               </p>
             </div>
 
@@ -177,7 +168,7 @@ function about() {
             <div className="col-span-2 flex flex-col items-end justify-between sm:flex-row sm:!order-3 sm:text-center sm:!m-auto sm:items-center ">
               <div className="flex flex-col items-end justify-center sm:!items-center sm:!px-2">
                 <span className="inline-block text-7xl font-bold sm:text-5xl">
-                  <AnimatedNumbers value={30} />+
+                  <AnimatedNumbers value={20} />+
                 </span>
                 <h2 className="text-xl font-meduim capitalize text-dark/75">
                   satisfied clients
@@ -186,7 +177,7 @@ function about() {
 
               <div className="flex flex-col items-end justify-center sm:!items-center sm:!px-2">
                 <span className="inline-block text-7xl font-bold sm:text-5xl">
-                  <AnimatedNumbers value={30} />+
+                  <AnimatedNumbers value={20} />+
                 </span>
                 <h2 className="text-xl font-meduim capitalize text-dark/75">
                   projects completed

@@ -1,0 +1,13 @@
+.dotPattern{
+    /* --dot-bg: white; */
+    --dot-bg: #F5F5F5;
+  --dot-color: gray;
+  --dot-size: 2px;
+  --dot-space: 10px;
+  width: 170px;
+  height: 70px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+}

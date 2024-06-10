@@ -81,7 +81,7 @@ export default function Experience() {
             company="Myer"
             companyLink={"https://www.myer.com.au/"}
             time="2022-2022"
-            address="Richmond, Melbourne, Vic, 3121"
+            address="Melbourne, Vic, 3000"
             work={
               <ul className="list-disc ml-5 w-[120%]">
                 <li>

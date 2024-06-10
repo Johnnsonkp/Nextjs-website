@@ -9,10 +9,12 @@ import {
 } from "./icons";
 import { useEffect, useState } from "react";
 
+import Image from "next/image";
 import Link from "next/link";
 import Logo from "./Logo";
 import LogoDropDown from "./LogoDropDown/LogoDropDown";
 import React from "react";
+import logo from '../../public/images/transparent-logo.png'
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
@@ -23,19 +25,27 @@ const CustomLink = ({ title, href, className }) => {
   return (
     <Link
       href={href}
-      className={`${className} relative group border-r-[0.5px] border-l-[0.5px] border-lightGray px-8
+      className={`${className} relative group border-r-[0.5px] border-l-[0.5px] border-[#EBF0F5] px-8
       `}
+      // style={{
+      //   background:
+      //     router.asPath === href
+      //       ? "linear-gradient(360deg, rgba(226, 151, 103, 0.8) -94.82%, rgba(49, 239, 195, 0) 70.64%)"
+      //       : "transparent",
+      //   color: router.asPath === href && "rgba(226, 151, 103, 1)",
+      // }}
       style={{
         background:
           router.asPath === href
-            ? "linear-gradient(360deg, rgba(226, 151, 103, 0.8) -94.82%, rgba(49, 239, 195, 0) 70.64%)"
+            ? "linear-gradient(360deg, rgba(107, 216, 111, 0.8) -94.82%, rgba(49, 239, 195, 0) 70.64%)"
             : "transparent",
-        color: router.asPath === href && "rgba(226, 151, 103, 1)",
+        color: router.asPath === href && "rgba(22, 163, 73, 1)",
       }}
     >
       {title}
       <span
-        style={{ backgroundColor: "rgba(226, 151, 103, 1)" }}
+        // style={{ backgroundColor: "rgba(226, 151, 103, 1)" }}
+        style={{backgroundColor: 'rgba(107, 216, 111, 1)'}}
         className={`
         h-[6px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
         ${router.asPath === href ? "w-full" : "w-0"}
@@ -59,19 +69,27 @@ const CustomMobileLink = ({ title, href, className = "", toggle }) => {
     <button
       onClick={handleClick}
       href={href}
-      className={`${className} relative group border-lightGray px-8 text-light dark:text-dark mt-1
+      className={`${className} relative group border-[#EBF0F5] px-8 text-light dark:text-dark mt-1
       `}
+      // style={{
+      //   background:
+      //     router.asPath === href
+      //       ? "linear-gradient(360deg, rgba(226, 151, 103, 0.8) -94.82%, rgba(49, 239, 195, 0) 70.64%)"
+      //       : "transparent",
+      //   color: router.asPath === href && "rgba(226, 151, 103, 1)",
+      // }}
       style={{
         background:
           router.asPath === href
-            ? "linear-gradient(360deg, rgba(226, 151, 103, 0.8) -94.82%, rgba(49, 239, 195, 0) 70.64%)"
+            ? "linear-gradient(360deg, rgba(107, 216, 111, 0.8) -94.82%, rgba(49, 239, 195, 0) 70.64%)"
             : "transparent",
-        color: router.asPath === href && "rgba(226, 151, 103, 1)",
+        color: router.asPath === href && "rgba(22, 163, 73, 1)",
       }}
     >
       {title}
       <span
-        style={{ backgroundColor: "rgba(226, 151, 103, 1)" }}
+        // style={{ backgroundColor: "rgba(226, 151, 103, 1)" }}
+        style={{backgroundColor: 'rgba(107, 216, 111, 1)'}}
         className={`
         h-[3px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
         ${router.asPath === href ? "w-full" : "w-0"}
@@ -110,12 +128,15 @@ const NavBarCustom = () => {
 
   return (
     <header
-      className={`w-full px-20 py-2 font-medium flex items-center justify-between dark:text-light mt-0 mb-0 border-b-[1px] border-lightGray overflow-hidden relative sm:!px-5 sm:!py-4 `}
+      className={`w-full px-20 py-3 font-medium flex items-center justify-between dark:text-light mt-0 mb-0 border-b-[1px] border-[#EBF0F5] dark:border-[#EBF0F5] overflow-hidden relative sm:!px-5 sm:!py-4 `} 
       style={{
         boxSizing: "border-box",
       }}
     >
-      <Logo className={"mr-4 py-5 px-3"} />
+      {/* <Logo className={"mr-4 py-5 px-3"} /> */}
+      <Link href="/">
+        <Image src={logo} className={"mr-4 py-0 px-3 w-16 bg-[#F5F5F5] rounded-[10rem]"}/>
+      </Link>
       {/* <LogoDropDown className={"mr-4 py-5 px-3"} /> */}
       <button
         className="flex-col justify-center items-center hidden lg:flex"
