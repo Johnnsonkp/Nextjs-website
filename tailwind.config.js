@@ -46,6 +46,9 @@ module.exports = {
       backgroundImage: {
         circularLight:
           "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px, #f5f5f5 100px)",
+        circularLighter:
+          // "repeating-radial-gradient(rgba(244, 195, 194, 1)1px,#f5f5f5 2px, #f5f5f5 110px)",
+          "repeating-radial-gradient(rgba(244, 195, 194, 0.0)1px,#f5f5f5 2px, #f5f5f5 110px)",
         circularDark:
           "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px, #1b1b1b 100px)",
       },
@@ -53,3 +56,8 @@ module.exports = {
   },
   plugins: [],
 };
+
+
+// rgb(252, 241, 240)
+
+// #F4C3C2

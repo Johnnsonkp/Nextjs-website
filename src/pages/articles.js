@@ -1,16 +1,18 @@
+import React, { useEffect } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
 import AnimatedText from "@/components/AnimatedText";
+import Client from "@notionhq/client";
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "@/components/Layout";
 import Link from "next/link";
-import React from "react";
 import article1 from "../../public/images/articles/pagination component in reactjs.jpg";
 import article2 from "../../public/images/articles/create loading screen in react js.jpg";
 import article3 from "../../public/images/articles/student-spotlight.png";
 import article4 from "../../public/images/articles/create modal component in react using react portals.png";
 import article5 from "../../public/images/articles/todo list app built using react redux and framer motion.png";
+import getNotion from "./api/get-notion";
 import { useRef } from "react";
 
 const FramerImage = motion(Image);
@@ -108,7 +110,9 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
   );
 };
 
+
 function articles() {
+
   return (
     <>
       <Head>
@@ -118,7 +122,6 @@ function articles() {
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            // text="Words Can Change The World!"
             text="The Power of Words"
             className="mb-16"
           />
@@ -128,63 +131,13 @@ function articles() {
               summary="Learn How to build a custom pagination component in ReactJS from scratch."
               time="9 min read"
               img={article3}
-              link={
-                "https://coderacademy.edu.au/blog/student-spotlight-chinonso-john-nkpolukwu-coder-academy-melbourne"
-              }
+              // link={
+              //   "https://coderacademy.edu.au/blog/student-spotlight-chinonso-john-nkpolukwu-coder-academy-melbourne"
+              // }
+              link={"https://nextjs-notion-cms-six.vercel.app/"}
             />
-            {/* <FeaturedArticle
-              title="Build A Custom Pagination Component In Reactjs From Scratch."
-              summary="Learn How to build a custom pagination component in ReactJS from scratch."
-              time="9 min read"
-              img={article2}
-              link={"/"}
-            /> */}
           </ul>
-          {/* <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
-            All Articles
-          </h2>
-          <ul>
-            <Article
-              title={
-                "Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              }
-              date="March 22, 2023"
-              link="/"
-              img={article4}
-            />
-            <Article
-              title={
-                "Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              }
-              date="March 22, 2023"
-              link="/"
-              img={article5}
-            />
-            <Article
-              title={
-                "Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              }
-              date="March 22, 2023"
-              link="/"
-              img={article4}
-            />
-            <Article
-              title={
-                "Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              }
-              date="March 22, 2023"
-              link="/"
-              img={article4}
-            />
-            <Article
-              title={
-                "Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              }
-              date="March 22, 2023"
-              link="/"
-              img={article4}
-            />
-          </ul> */}
+
         </Layout>
       </main>
     </>

@@ -5,13 +5,13 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import NavBar from "@/components/NavBar";
+import NavBar1 from "@/components/navAgency/NavBar1";
 import NavBarCustom from "@/components/NavBarCustom";
 import TopNavInfiniteScroll from "@/components/TopNavInfiniteScroll";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-mont",
-  // variable: "font-family: 'Montserrat'",
 });
 
 export default function App({ Component, pageProps }) {
@@ -26,7 +26,8 @@ export default function App({ Component, pageProps }) {
       >
         <TopNavInfiniteScroll />
         {/* <NavBar /> */}
-        <NavBarCustom />
+        {/* <NavBarCustom /> */}
+        <NavBar1 />
         <Component {...pageProps} />
         <Footer />
       </main>

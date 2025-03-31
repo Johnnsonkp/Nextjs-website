@@ -1,0 +1,25 @@
+.rotateAnimation {
+    animation: rotation 20s infinite linear;
+}
+.rotationIcons {
+    animation: antiRotation 20s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes antiRotation {
+    from {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    }
+    to {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(-360deg) skew(0deg, 0deg);
+    }
+}
+

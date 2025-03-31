@@ -1,0 +1,10 @@
+.heroTextBold{
+    /* font-family:  "Inter", "Inter Placeholder", sans-serif; */
+    font-family:  Inter;
+}
+
+.textBold{
+    font-weight: 800;
+    font-family: Noto Serif, sans-serif;
+    color: #333333;
+}

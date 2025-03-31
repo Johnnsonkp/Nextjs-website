@@ -143,8 +143,6 @@ function Projects() {
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light overflow-x-hidden sm:w-[100vw] sm:px-5 ">
         <Layout className="pt-16 sm:!px-0">
           <AnimatedText
-            // text="Imagination Trumps knowledge!"
-            // text="Unhinged Creativity"
             text="Projects"
             className="mb-16"
           />

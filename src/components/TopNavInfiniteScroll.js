@@ -24,31 +24,31 @@ export default function TopNavInfiniteScroll() {
     >
       <ul id="list" className={`dark:text-dark ${styles.list}`}>
         <li>
-          <i className={`fa-solid fa-bullhorn`}></i> AVAILABLE FOR WORK!{" "}
+          <i className={`fa-solid fa-bullhorn`}></i> AVAILABLE FOR HIRE!{" "}
         </li>
         <li>
-          <i className="fa-solid fa-bullhorn"></i> AVAILABLE FOR WORK!{" "}
+          <i className="fa-solid fa-bullhorn"></i> AVAILABLE FOR HIRE!{" "}
         </li>
         <li>
-          <i className="fa-solid fa-bullhorn"></i> AVAILABLE FOR WORK!{" "}
+          <i className="fa-solid fa-bullhorn"></i> AVAILABLE FOR HIRE!{" "}
         </li>
         <li>
-          <i className="fa-solid fa-bullhorn"></i> AVAILABLE FOR WORK!{" "}
+          <i className="fa-solid fa-bullhorn"></i> AVAILABLE FOR HIRE!{" "}
         </li>
         <li>
-          <i className="fa-solid fa-bullhorn "></i> AVAILABLE FOR WORK!{" "}
+          <i className="fa-solid fa-bullhorn "></i> AVAILABLE FOR HIRE!{" "}
         </li>
         <li>
-          <i className="fa-solid fa-bullhorn"></i> AVAILABLE FOR WORK!{" "}
+          <i className="fa-solid fa-bullhorn"></i> AVAILABLE FOR HIRE!{" "}
         </li>
         <li>
-          <i className="fa-solid fa-bullhorn "></i> AVAILABLE FOR WORK!{" "}
+          <i className="fa-solid fa-bullhorn "></i> AVAILABLE FOR HIRE!{" "}
         </li>
         <li>
-          <i className="fa-solid fa-bullhorn "></i> AVAILABLE FOR WORK!{" "}
+          <i className="fa-solid fa-bullhorn "></i> AVAILABLE FOR HIRE!{" "}
         </li>
         <li>
-          <i className="fa-solid fa-bullhorn "></i> AVAILABLE FOR WORK!{" "}
+          <i className="fa-solid fa-bullhorn "></i> AVAILABLE FOR HIRE!{" "}
         </li>
       </ul>
     </div>

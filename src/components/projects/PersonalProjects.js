@@ -2,20 +2,48 @@ import { FeaturedProject, Project } from "@/pages/projects";
 
 import CozyTees from "../../../public/images/projects/cozy-landing.png";
 import React from "react";
+import codeBASED from "../../../public/images/projects/codeBASED.png"
 import portfolio from "../../../public/images/dev-portfolio.png";
-import project1 from "../../../public/images/projects/taskSprinterV3-2.png";
 import project2 from "../../../public/images/projects/itsAVibe.png";
 import project3 from "../../../public/images/projects/cityStaysMelb.png";
-import project4 from "../../../public/images/projects/webscraper.png";
 import project5 from "../../../public/images/projects/workflows.png";
 import project6 from "../../../public/images/projects/ecom-arb.png";
 import project7 from "../../../public/images/projects/AlphahMock.png";
+import project8 from '../../../public/images/projects/nextjsblog.png'
 
 function PersonalProjects() {
+  
   return (
+
     <div className="grid grid-cols-12 gap-24 gap-y-32 sm:gap-0 sm:!grid-cols-none sm:grid-cols-auto sm:!flex-col sm:justify-between">
       <div className="col-span-12 sm:w-[100%] sm:my-10 sm:mx-auto">
         <FeaturedProject
+          title={"codeBASED"}
+          img={codeBASED}
+          summary={
+            "A coding sandbox for developers! Take on unlimited coding challenges directly from your GitHub repositories, refine your skills, and master your craft—all in one place."
+          }
+          link={"https://codebased-production.up.railway.app/"}
+          github={"https://github.com/Johnnsonkp/codeBASED"}
+          type={"Featured Project"}
+        />
+      </div>
+
+      <div className="col-span-6 sm:col-span-12 sm:w-[100%] sm:my-10 sm:mx-auto">
+        <Project
+          title={"NextJS Blog"}
+          img={project8}
+          summary={
+            "The Next.js Notion Blog is a modern, fast, and minimalistic blogging platform designed to document my programming journey. Built with Next.js and Notion as a headless CMS,"
+          }
+          link={"https://nextjs-notion-cms-six.vercel.app/"}
+          github={"https://github.com/Johnnsonkp/"}
+          type={"Project"}
+        />
+      </div>
+      
+      <div className="col-span-6 sm:col-span-12 sm:w-[100%] sm:my-10 sm:mx-auto">
+        <Project
           title={"Workflows Client"}
           img={project5}
           summary={
@@ -23,22 +51,9 @@ function PersonalProjects() {
           }
           link={"https://workflow-client.netlify.app/"}
           github={"https://github.com/Johnnsonkp/workflow-client"}
-          type={"Featured Project"}
+          type={"Project"}
         />
       </div>
-
-      {/* <div className="col-span-12 sm:w-[100%] sm:my-10 sm:mx-auto">
-        <FeaturedProject
-          title={"Ecommerce Web Scraper [**Still In Development]"}
-          img={project4}
-          summary={
-            "A web scraping application, built using Ruby on Rails, leveraging the power of web scraping technology, the app extracts item listings from Gumtree marketplace. Users have the flexibility to apply custom price markups before publishing the listings onto Facebook Marketplace."
-          }
-          link={"https://fb-scraper-old-paper-2255.fly.dev/"}
-          github={"https://github.com/Johnnsonkp/webscrape-dropshipper"}
-          type={"Featured Project"}
-        />
-      </div> */}
 
       <div className="col-span-6 sm:col-span-12 sm:w-[100%] sm:my-10 sm:mx-auto">
         <Project
@@ -52,19 +67,6 @@ function PersonalProjects() {
           type={"Featured Project"}
         />
       </div>
-
-      {/* <div className="col-span-6 sm:col-span-12 sm:w-[100%] sm:my-10 sm:mx-auto">
-        <Project
-          title={"Productivity System Prototype "}
-          img={project1}
-          summary={
-            "A complete productivity App created with React on the frontend, nodeJS and express for the server and Notion as the database. Developed to allow you stay organized, efficient, and focused on your daily, weekly and monthly goals. Still in development phase, adding a fulll fledge rails backend soon."
-          }
-          link={"https://tasksprinterv3.netlify.app/"}
-          github={"https://github.com/Johnnsonkp/TaskSprinterv3"}
-          type={"Productivity System"}
-        />
-      </div> */}
       
       <div className="col-span-6 sm:col-span-12 sm:w-[100%] sm:my-10 sm:mx-auto">
         <Project

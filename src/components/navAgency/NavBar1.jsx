@@ -1,23 +1,11 @@
-import {
-  DribbbleIcon,
-  GithubIcon,
-  LinkedInIcon,
-  MoonIcon,
-  PinterestIcon,
-  SunIcon,
-  TwitterIcon,
-} from "./icons";
 import { useEffect, useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "./Logo";
-import LogoDropDown from "./LogoDropDown/LogoDropDown";
 import React from "react";
-import logo from '../../public/images/transparent-logo.png'
+import logo from '../../../public/images/transparent-logo.png'
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 const CustomLink = ({ title, href, className }) => {
   const router = useRouter();
@@ -25,22 +13,14 @@ const CustomLink = ({ title, href, className }) => {
   return (
     <Link
       href={href}
-      className={`${className} relative group border-r-[0.5px] border-l-[0.5px] border-[#EBF0F5] px-8
-      `}
-      style={{
-        background:
-          router.asPath === href
-            ? "linear-gradient(360deg, rgba(107, 216, 111, 0.8) -94.82%, rgba(49, 239, 195, 0) 70.64%)"
-            : "transparent",
-        color: router.asPath === href && "rgba(22, 163, 73, 1)",
-      }}
+      className={`${className} relative group border-r-[0.5px] border-l-[0.5px] border-[#EBF0F5] px-8`}
+      style={{color: router.asPath === href && "rgba(218, 56, 52, 1)"}}
     >
       {title}
       <span
-        // style={{ backgroundColor: "rgba(226, 151, 103, 1)" }}
-        style={{backgroundColor: 'rgba(107, 216, 111, 1)'}}
+        style={{backgroundColor: 'rgba(218, 56, 52, 1)'}}
         className={`
-        h-[6px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
+        h-[13px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
         ${router.asPath === href ? "w-full" : "w-0"}
         dark:bg-light overflow-hidden`}
       >
@@ -62,15 +42,7 @@ const CustomMobileLink = ({ title, href, className = "", toggle }) => {
     <button
       onClick={handleClick}
       href={href}
-      className={`${className} relative group border-[#EBF0F5] px-8 text-light dark:text-dark mt-1
-      `}
-      // style={{
-      //   background:
-      //     router.asPath === href
-      //       ? "linear-gradient(360deg, rgba(226, 151, 103, 0.8) -94.82%, rgba(49, 239, 195, 0) 70.64%)"
-      //       : "transparent",
-      //   color: router.asPath === href && "rgba(226, 151, 103, 1)",
-      // }}
+      className={`${className} relative group border-[#EBF0F5] px-8 text-light dark:text-dark mt-1`}
       style={{
         background:
           router.asPath === href
@@ -80,11 +52,8 @@ const CustomMobileLink = ({ title, href, className = "", toggle }) => {
       }}
     >
       {title}
-      <span
-        // style={{ backgroundColor: "rgba(226, 151, 103, 1)" }}
-        style={{backgroundColor: 'rgba(107, 216, 111, 1)'}}
-        className={`
-        h-[3px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
+      <span style={{backgroundColor: 'rgba(107, 216, 111, 1)'}}
+        className={`h-[3px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
         ${router.asPath === href ? "w-full" : "w-0"}
         dark:bg-light overflow-hidden`}
       >
@@ -94,41 +63,38 @@ const CustomMobileLink = ({ title, href, className = "", toggle }) => {
   );
 };
 
-const NavBarCustom = () => {
-  const [mode, setMode] = useThemeSwitcher();
+const NavBar1 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
-  const DayNightSwitch = () => {
-    return (
-      <button
-        onClick={() => setMode(mode === "light" ? "dark" : "light")}
-        className={`ml-3 flex items-center justify-center rounded-full p-1 ${
-          mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-        }`}
-      >
-        {mode === "dark" ? (
-          <SunIcon className={"fill-dark"} />
-        ) : (
-          <MoonIcon className={"fill-dark"} />
-        )}
-      </button>
-    );
-  };
+  // const DayNightSwitch = () => {
+  //   return (
+  //     <button
+  //       onClick={() => setMode(mode === "light" ? "dark" : "light")}
+  //       className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+  //         mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+  //       }`}
+  //     >
+  //       {mode === "dark" ? (
+  //         <SunIcon className={"fill-dark"} />
+  //       ) : (
+  //         <MoonIcon className={"fill-dark"} />
+  //       )}
+  //     </button>
+  //   );
+  // };
 
   return (
     <header
-      className={`w-full px-20 py-3 font-medium flex items-center justify-between dark:text-light mt-0 mb-0 border-b-[1px] border-[#EBF0F5] dark:border-[#EBF0F5] overflow-hidden relative sm:!px-5 sm:!py-4 `} 
-      style={{
-        boxSizing: "border-box",
-      }}
+      className={`w-full px-20 py-1 mt-4 font-medium flex items-center justify-between dark:text-light mb-0 overflow-hidden relative sm:!px-5 sm:!py-4 `} 
+      style={{boxSizing: "border-box",}}
     >
       {/* <Logo className={"mr-4 py-5 px-3"} /> */}
       <Link href="/">
-        <Image src={logo} className={"mr-4 py-0 px-3 w-16 bg-[#F5F5F5] rounded-[10rem]"}/>
+        <Image src={logo} className={"mr-4 py-0 px-3 w-16 bg-[#F5F5F5] rounded-[10rem]"} alt="logo"/>
       </Link>
       {/* <LogoDropDown className={"mr-4 py-5 px-3"} /> */}
       <button
@@ -170,33 +136,15 @@ const NavBarCustom = () => {
 
         <nav className="flex items-center justify-center flex-wrap ">
           <motion.a
-            href="/"
+            href="mailto:john.nkp1@gmail.com"
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3"
+            className="w-30 mx-3 border border-[#DA3834] bg-[#DA3834] text-[#fff] text-sm font-semibold py-2 px-5 rounded-full"
           >
-            <TwitterIcon />
+            <button>Get in touch</button>
           </motion.a>
-          <motion.a
-            href="https://github.com/Johnnsonkp"
-            target={"_blank"}
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3 bg-light rounded-full dark:bg-dark"
-          >
-            <GithubIcon />
-          </motion.a>
-          <motion.a
-            href="https://www.linkedin.com/in/john-nkpolukwu-521201138/"
-            target={"_blank"}
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3"
-          >
-            <LinkedInIcon />
-          </motion.a>
-          <DayNightSwitch />
+          
         </nav>
       </div>
 
@@ -267,7 +215,7 @@ const NavBarCustom = () => {
             >
               <LinkedInIcon />
             </motion.a>
-            <DayNightSwitch />
+            {/* <DayNightSwitch /> */}
           </nav>
         </motion.div>
       ) : null}
@@ -275,4 +223,4 @@ const NavBarCustom = () => {
   );
 };
 
-export default NavBarCustom;
+export default NavBar1;
